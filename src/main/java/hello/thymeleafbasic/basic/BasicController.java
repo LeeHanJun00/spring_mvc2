@@ -112,6 +112,11 @@ public class BasicController {
     return "basic/comments";
   }
 
+  @GetMapping("/block")public String block(Model model) {
+    addUsers(model);
+    return "basic/block";
+  }
+
   @Component("helloBean")
   static class HelloBean{
     public String hello(String data) {
